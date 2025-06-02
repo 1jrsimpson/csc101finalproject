@@ -1,3 +1,5 @@
+Overview of Project:
+The purpose of our project is to ...
 Description of all files in this project:
 
 classes.py:
