@@ -15,3 +15,16 @@ def playlist_oldvnew(songs:list[Song])-> dict:
         else: # If the song was released any time after...
             new_songs[i]=songs[i] # The song is added to the new songs playlist
     return print("old songs:",old_songs,"new songs:", new_songs) # returns both playlists
+
+
+# Function 2: Duration
+# Purpose: This function must take two parameters, one of type list[Song] and the other of type Duration.
+# It must return a new list containing a "playlist" of sorts of the songs of which the input's duration is less than or equal to the second parameter type duration.
+# Input: type list[Song} and type Duration
+# Output: new list containing songs shorter than parameter Duration
+def playlist_duration(songs: list[Song], total_time: Duration) -> list[Song]:
+    playlist = [] # creates empty list for output
+    for song in songs: # filtering through each iteration to check duration of each song
+        if song.duration <= total_time: # if the song is less than the given time, then ---
+            playlist.append(song) # append the song to new list if the song is less than the given duration
+    return playlist # return the new playlist of songs

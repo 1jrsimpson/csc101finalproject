@@ -47,3 +47,26 @@ songs2 = [
     Song("Somebody That I Used to Know", Duration(4, 4), 2011, "Gotye ft. Kimbra"),
     Song("Shallow", Duration(3, 36), 2018, "Lady Gaga & Bradley Cooper"),
     Song("Pompeii", Duration(3, 34), 2013, "Bastille")]
+
+# Song list 1 in dictionary format
+songs_dict = {
+    "Bohemian Rhapsody": {"duration": (5, 55), "year": 1975, "artist": "Queen"},
+    "Imagine": {"duration": (3, 3), "year": 1971, "artist": "John Lennon"},
+    "Billie Jean": {"duration": (4, 54), "year": 1982, "artist": "Michael Jackson"},
+    "Hey Jude": {"duration": (7, 11), "year": 1968, "artist": "The Beatles"},
+    "Like a Rolling Stone": {"duration": (6, 13), "year": 1965, "artist": "Bob Dylan"},
+    "Smells Like Teen Spirit": {"duration": (5, 1), "year": 1991, "artist": "Nirvana"},
+    "Rolling in the Deep": {"duration": (3, 48), "year": 2010, "artist": "Adele"},
+    "Blinding Lights": {"duration": (3, 22), "year": 2019, "artist": "The Weeknd"},
+    "Shake It Off": {"duration": (3, 39), "year": 2014, "artist": "Taylor Swift"},
+    "HUMBLE.": {"duration": (2, 57), "year": 2017, "artist": "Kendrick Lamar"},
+    "Lose Yourself": {"duration": (5, 26), "year": 2002, "artist": "Eminem"},
+    "Bad Guy": {"duration": (3, 14), "year": 2019, "artist": "Billie Eilish"},
+    "Old Town Road": {"duration": (2, 37), "year": 2019, "artist": "Lil Nas X"},
+    "Drivers License": {"duration": (4, 2), "year": 2021, "artist": "Olivia Rodrigo"},
+    "Uptown Funk": {"duration": (4, 30), "year": 2014, "artist": "Mark Ronson ft. Bruno Mars"},
+    "Stay": {"duration": (2, 21), "year": 2021, "artist": "The Kid LAROI & Justin Bieber"},
+    "Shape of You": {"duration": (3, 53), "year": 2017, "artist": "Ed Sheeran"},
+    "Radioactive": {"duration": (3, 6), "year": 2012, "artist": "Imagine Dragons"},
+    "Take Me to Church": {"duration": (4, 2), "year": 2013, "artist": "Hozier"},
+    "Can't Feel My Face": {"duration": (3, 35), "year": 2015, "artist": "The Weeknd"}}
