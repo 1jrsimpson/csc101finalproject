@@ -14,7 +14,15 @@ def playlist_oldvnew(songs:list[Song])-> dict:
             old_songs[i]=songs[i] # If the song was released before 2000, then it's added to the old songs playlist
         else: # If the song was released any time after...
             new_songs[i]=songs[i] # The song is added to the new songs playlist
-    return print("old songs:",old_songs,"new songs:", new_songs) # returns both playlists
+    print("Playlist of Old Songs")
+    for song in old_songs: # This for loop fixes the display so there is one song on each line
+        print(song,":",old_songs[song])
+    print("Playlist of New Songs")
+    for song in old_songs:  # This for loop fixes the display so there is one song on each line
+        print(song, ":", old_songs[song])
+
+
+    #return print("Old Songs:",old_songs,"New Songs:", new_songs) # returns both playlists
 
 
 # Function 2: Duration
