@@ -22,7 +22,6 @@ def playlist_oldvnew(songs:list[Song])-> dict:
         print(song, ":", new_songs[song])
     #return print("Old Songs:",old_songs,"New Songs:", new_songs) # returns both playlists
 
-
 # Function 2: Duration
 # Purpose: This function must take two parameters, one of type list[Song] and the other of type Duration.
 # It must return a new list containing a "playlist" of sorts of the songs of which the input's duration is less than or equal to the second parameter type duration.
