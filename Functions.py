@@ -3,7 +3,8 @@ from Classes import Song
 from Classes import Duration
 
 # Function 1: Old vs New
-# This function must take one parameter of type list[Song] and return two dictionaries of songs, or "Playlists", one for old Songs (released 2000 or earlier) and one for new songs (2001 or later)
+# This function must take one parameter of type list[Song] and return two dictionaries of songs, or "Playlists",
+# one for old Songs (released 2000 or earlier) and one for new songs (2001 or later)
 # Input: one parameter of type list[Song]
 # Output: two playlists (dictionaries) of Songs
 def playlist_oldvnew(songs:list[Song])-> dict:

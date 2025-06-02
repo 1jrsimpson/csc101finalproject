@@ -28,7 +28,9 @@ class Song:
     # input: Another value to compare to the Song
     # output: boolean indicating equality
     def __eq__(self,other):
-        return self is other and type(other) == type(self) and ((other.title) == (self.title)) and ((other.duration) == (self.duration)) and ((other.year_released) == (self.year_released)) and ((other.artist) == (self.artist))
+        return (self is other and type(other) == type(self) and
+                ((other.title) == (self.title)) and ((other.duration) == (self.duration)) and
+                ((other.year_released) == (self.year_released)) and ((other.artist) == (self.artist)))
 
 # Class Duration
 # Representation of a duration as minutes and seconds.
