@@ -18,10 +18,8 @@ def playlist_oldvnew(songs:list[Song])-> dict:
     for song in old_songs: # This for loop fixes the display so there is one song on each line
         print(song,":",old_songs[song])
     print("Playlist of New Songs")
-    for song in old_songs:  # This for loop fixes the display so there is one song on each line
-        print(song, ":", old_songs[song])
-
-
+    for song in new_songs:  # This for loop fixes the display so there is one song on each line
+        print(song, ":", new_songs[song])
     #return print("Old Songs:",old_songs,"New Songs:", new_songs) # returns both playlists
 
 
