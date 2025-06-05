@@ -36,4 +36,4 @@ def playlist_duration(songs: list[Song], total_time: Duration) -> list[Song]:
     for song in songs: # filtering through each iteration to check duration of each song
         if song.duration <= total_time: # if the song is less than the given time, then ---
             playlist.append(song) # append the song to new list if the song is less than the given duration
-    return playlist # return the new playlist of songs
+    return playlist # return the new playlist of
