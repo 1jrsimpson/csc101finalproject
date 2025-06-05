@@ -1,5 +1,5 @@
 Overview of Project:
-The purpose of our project is to ...
+The purpose of our project is to create playlists, or lists of sorted songs based off a certain criteria. We start with a list of songs and return a playlist in the form of a dictionary.
 Description of all files in this project:
 
 classes.py:

@@ -9,4 +9,3 @@ from data import songs_dict
 my_playlists= Functions.playlist_oldvnew(data.songs1)
 
 my_playlists2= Functions.playlist_oldvnew(data.songs2)
-
