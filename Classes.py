@@ -55,7 +55,7 @@ class Song:
         # input: Song for which a string representation is desired.
         # output: string representation
     def __repr__(self):
-        return 'Song({}, {}, {})'.format(self.title, self.duration, self.year_released, self.artist)
+        return 'Song({}, {}, {}, {})'.format(self.title, self.duration, self.year_released, self.artist)
 
         # Compare the Song object with another value to determine equality.
         # input: Song against which to compare

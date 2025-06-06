@@ -28,37 +28,25 @@ class Test(TestCase):
         songs = songs1
         total_time = data.Duration(3, 0)
         expected = [
-    Song("Imagine", Duration(3, 3), 1971, "John Lennon"),
-    Song("Rolling in the Deep", Duration(3, 48), 2010, "Adele"),
-    Song("Blinding Lights", Duration(3, 22), 2019, "The Weeknd"),
-    Song("Shake It Off", Duration(3, 39), 2014, "Taylor Swift"),
     Song("HUMBLE.", Duration(2, 57), 2017, "Kendrick Lamar"),
-    Song("Bad Guy", Duration(3, 14), 2019, "Billie Eilish"),
     Song("Old Town Road", Duration(2, 37), 2019, "Lil Nas X"),
-    Song("Stay", Duration(2, 21), 2021, "The Kid LAROI & Justin Bieber"),
-    Song("Shape of You", Duration(3, 53), 2017, "Ed Sheeran"),
-    Song("Radioactive", Duration(3, 6), 2012, "Imagine Dragons"),
-    Song("Can't Feel My Face", Duration(3, 35), 2015, "The Weeknd")
-]
+    Song("Stay", Duration(2, 21), 2021, "The Kid LAROI & Justin Bieber")]
+
 
         result = Functions.playlist_duration(songs, total_time)
         self.assertEqual(expected, result)
 
     def test_playlist_duration_2(self):
         songs = songs2
-        total_time = data.Duration(3, 0)
-        expected = [
-    Song("Mr. Brightside", Duration(3, 42), 2003, "The Killers"),
-    Song("Take On Me", Duration(3, 48), 1985, "a-ha"),
-    Song("Seven Nation Army", Duration(3, 52), 2003, "The White Stripes"),
-    Song("Creep", Duration(3, 58), 1992, "Radiohead"),
-    Song("September", Duration(3, 35), 1978, "Earth, Wind & Fire"),
-    Song("Let It Go", Duration(3, 44), 2013, "Idina Menzel"),
-    Song("Happy", Duration(3, 53), 2013, "Pharrell Williams"),
-    Song("Royals", Duration(3, 10), 2013, "Lorde"),
-    Song("Shallow", Duration(3, 36), 2018, "Lady Gaga & Bradley Cooper"),
-    Song("Pompeii", Duration(3, 34), 2013, "Bastille")
-]
+        total_time = data.Duration(3, 50)
+        expected = [Song("Mr. Brightside", Duration(3, 42), 2003, "The Killers"),
+ Song("Take On Me", Duration(3, 48), 1985, "a-ha"),
+ Song("September", Duration(3, 35), 1978, "Earth, Wind & Fire"),
+ Song("Let It Go", Duration(3, 44), 2013, "Idina Menzel"),
+ Song("Royals", Duration(3, 10), 2013, "Lorde"),
+ Song("Shallow", Duration(3, 36), 2018, "Lady Gaga & Bradley Cooper"),
+ Song("Pompeii", Duration(3, 34), 2013, "Bastille")]
+
 
         result = Functions.playlist_duration(songs, total_time)
         self.assertEqual(expected, result)

@@ -9,7 +9,7 @@ import random
 # Input: one parameter of type list[Song]
 # Output: two playlists (dictionaries) of Songs
 
-def playlist_oldvnew(songs:list[Song])-> dict:
+def playlist_oldvnew(songs:list[Song])-> None:
     old_songs={} # Creates empty dictionary for old songs
     new_songs={} # Creates empty dictionary for new songs
     old_track=1
@@ -45,7 +45,7 @@ def playlist_duration(songs: list[Song], total_time: Duration) -> list[Song]:
     playlist = [] # creates empty list for output
     try:
         for song in songs: # filtering through each iteration to check duration of each song
-            if song.duration.minutes <= total_time.minutes: # if the song is less than the given time, then ---
+            if song.duration.minutes < total_time.minutes: # if the song is less than the given time, then ---
                 playlist.append(song) # append the song to new list if the song is less than the given duration
 
             else:
