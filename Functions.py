@@ -57,6 +57,7 @@ def playlist_duration(songs: list[Song], total_time: Duration) -> list[Song]:
     except TypeError:
         print("An error occurred while processing the input")
 
+
 # Function 3: Total Playlist Duration
 # Purpose: This function will take parameter List of type Song and a second
 # inputted parameter of type Duration. It will return a new list of all the songs within the provided type Duration.

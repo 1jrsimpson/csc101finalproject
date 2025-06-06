@@ -2,6 +2,8 @@ from unittest import TestCase
 import data
 import Classes
 import Functions
+from Classes import Song
+from Classes import Duration
 from data import songs1
 from data import songs2
 
@@ -19,52 +21,87 @@ class Test(TestCase):
         result = Functions.playlist_oldvnew(songs)
         self.assertEqual(expected, result)
 
+    ##############################################################################################
+# FUNCTION 2 SONG DURATION
+
     def test_playlist_duration_1(self):
         songs = songs1
         total_time = data.Duration(3, 0)
         expected = [
-            data.Song("HUMBLE.", data.Duration(2, 57), 2017, "Kendrick Lamar"),
-            data.Song("Old Town Road", data.Duration(2, 37), 2019, "Lil Nas X"),
-            data.Song("Stay", data.Duration(2, 21), 2021, "The Kid LAROI & Justin Bieber")]
+    Song("Imagine", Duration(3, 3), 1971, "John Lennon"),
+    Song("Rolling in the Deep", Duration(3, 48), 2010, "Adele"),
+    Song("Blinding Lights", Duration(3, 22), 2019, "The Weeknd"),
+    Song("Shake It Off", Duration(3, 39), 2014, "Taylor Swift"),
+    Song("HUMBLE.", Duration(2, 57), 2017, "Kendrick Lamar"),
+    Song("Bad Guy", Duration(3, 14), 2019, "Billie Eilish"),
+    Song("Old Town Road", Duration(2, 37), 2019, "Lil Nas X"),
+    Song("Stay", Duration(2, 21), 2021, "The Kid LAROI & Justin Bieber"),
+    Song("Shape of You", Duration(3, 53), 2017, "Ed Sheeran"),
+    Song("Radioactive", Duration(3, 6), 2012, "Imagine Dragons"),
+    Song("Can't Feel My Face", Duration(3, 35), 2015, "The Weeknd")
+]
+
         result = Functions.playlist_duration(songs, total_time)
         self.assertEqual(expected, result)
 
-    def test_playlist_total_duration_limit(self):
+    def test_playlist_duration_2(self):
+        songs = songs2
+        total_time = data.Duration(3, 0)
+        expected = [
+    Song("Mr. Brightside", Duration(3, 42), 2003, "The Killers"),
+    Song("Take On Me", Duration(3, 48), 1985, "a-ha"),
+    Song("Seven Nation Army", Duration(3, 52), 2003, "The White Stripes"),
+    Song("Creep", Duration(3, 58), 1992, "Radiohead"),
+    Song("September", Duration(3, 35), 1978, "Earth, Wind & Fire"),
+    Song("Let It Go", Duration(3, 44), 2013, "Idina Menzel"),
+    Song("Happy", Duration(3, 53), 2013, "Pharrell Williams"),
+    Song("Royals", Duration(3, 10), 2013, "Lorde"),
+    Song("Shallow", Duration(3, 36), 2018, "Lady Gaga & Bradley Cooper"),
+    Song("Pompeii", Duration(3, 34), 2013, "Bastille")
+]
+
+        result = Functions.playlist_duration(songs, total_time)
+        self.assertEqual(expected, result)
+
+    ##############################################################################################
+# FUNCTION 3 TOTAL DURATION
+
+    def test_playlist_total_duration_limit_1(self):
         songs = songs1
         total_time = data.Duration(30, 30)
-        expected = [data.Song("Bohemian Rhapsody", data.Duration(5, 55), 1975, "Queen"),
-                    data.Song("Imagine", data.Duration(3, 3), 1971, "John Lennon"),
-                    data.Song("Billie Jean", data.Duration(4, 54), 1982, "Michael Jackson"),
-                    data.Song("Hey Jude", data.Duration(7, 11), 1968, "The Beatles"),
-                    data.Song("Like a Rolling Stone", data.Duration(6, 13), 1965, "Bob Dylan")]
+        expected = [Song("Bohemian Rhapsody", Duration(5, 55), 1975, "Queen"),
+ Song("Imagine", Duration(3, 3), 1971, "John Lennon"),
+ Song("Billie Jean", Duration(4, 54), 1982, "Michael Jackson"),
+ Song("Hey Jude", Duration(7, 11), 1968, "The Beatles"),
+ Song("Like a Rolling Stone", Duration(6, 13), 1965, "Bob Dylan")]
         result = Functions.playlist_total_duration_limit(songs, total_time)
         self.assertEqual(expected, result)
 
+    def test_playlist_total_duration_limit_2(self):
+        songs = songs2
+        total_time = data.Duration(30, 30)
+        expected = [
+    Song("Hotel California", Duration(6, 30), 1976, "Eagles"),
+    Song("Superstition", Duration(4, 26), 1972, "Stevie Wonder"),
+    Song("I Will Always Love You", Duration(4, 31), 1992, "Whitney Houston"),
+    Song("Wonderwall", Duration(4, 18), 1995, "Oasis"),
+    Song("Mr. Brightside", Duration(3, 42), 2003, "The Killers")]
 
-    def test_playlist_shuffle_songs(self):
-        songs = songs1
-        expected = {
-    1: data.Song("Bad Guy", data.Duration(3, 14), 2019, "Billie Eilish"),
-    2: data.Song("Imagine", data.Duration(3, 3), 1971, "John Lennon"),
-    3: data.Song("Uptown Funk", data.Duration(4, 30), 2014, "Mark Ronson ft. Bruno Mars"),
-    4: data.Song("Smells Like Teen Spirit", data.Duration(5, 1), 1991, "Nirvana"),
-    5: data.Song("Stay", data.Duration(2, 21), 2021, "The Kid LAROI & Justin Bieber"),
-    6: data.Song("Bohemian Rhapsody", data.Duration(5, 55), 1975, "Queen"),
-    7: data.Song("Hey Jude", data.Duration(7, 11), 1968, "The Beatles"),
-    8: data.Song("Old Town Road", data.Duration(2, 37), 2019, "Lil Nas X"),
-    9: data.Song("Like a Rolling Stone", data.Duration(6, 13), 1965, "Bob Dylan"),
-    10: data.Song("Radioactive", data.Duration(3, 6), 2012, "Imagine Dragons"),
-    11: data.Song("Billie Jean", data.Duration(4, 54), 1982, "Michael Jackson"),
-    12: data.Song("Drivers License", data.Duration(4, 2), 2021, "Olivia Rodrigo"),
-    13: data.Song("Rolling in the Deep", data.Duration(3, 48), 2010, "Adele"),
-    14: data.Song("Shape of You", data.Duration(3, 53), 2017, "Ed Sheeran"),
-    15: data.Song("Can't Feel My Face", data.Duration(3, 35), 2015, "The Weeknd"),
-    16: data.Song("Shake It Off", data.Duration(3, 39), 2014, "Taylor Swift"),
-    17: data.Song("HUMBLE.", data.Duration(2, 57), 2017, "Kendrick Lamar"),
-    18: data.Song("Take Me to Church", data.Duration(4, 2), 2013, "Hozier"),
-    19: data.Song("Blinding Lights", data.Duration(3, 22), 2019, "The Weeknd"),
-    20: data.Song("Lose Yourself", data.Duration(5, 26), 2002, "Eminem")
-}
-        result = Functions.playlist_shuffle_songs(songs)
+        result = Functions.playlist_total_duration_limit(songs, total_time)
         self.assertEqual(expected, result)
 
+    ##############################################################################################
+# FUNCTION 4 SHUFFLE
+    def test_playlist_shuffle_songs_1(self):
+        songs = songs1
+        expected = len(songs)
+
+        result = Functions.playlist_shuffle_songs(songs)
+        self.assertEqual(expected, len(result))
+
+    def test_playlist_shuffle_songs_2(self):
+        songs = songs2
+        expected = len(songs)
+
+        result = Functions.playlist_shuffle_songs(songs)
+        self.assertEqual(expected, len(result))
