@@ -37,3 +37,5 @@ def playlist_duration(songs: list[Song], total_time: Duration) -> list[Song]:
         if song.duration <= total_time: # if the song is less than the given time, then ---
             playlist.append(song) # append the song to new list if the song is less than the given duration
     return playlist # return the new playlist of
+
+# adding this to try to merge on my end
