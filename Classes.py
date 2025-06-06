@@ -1,4 +1,6 @@
 # This file includes or Class Definitions
+import data
+
 
 # Class Song
 class Song:
@@ -8,7 +10,7 @@ class Song:
     # input: the song's title as a string
     # input: the song's duration as a Duration object
     # input: the year the song was released
-    def __init__(self, title: str, duration: float, year_released: int, artist: str):
+    def __init__(self, title: str, duration: data.Duration, year_released: int, artist: str):
         self.title = title
         self.duration = duration
         self.year_released = year_released
