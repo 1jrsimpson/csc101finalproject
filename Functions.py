@@ -41,7 +41,6 @@ def playlist_duration(songs: list[Song], total_time: Duration) -> list[Song]:
             playlist.append(song) # append the song to new list if the song is less than the given duration
     return playlist # return the new playlist of songs
 
-
 # Function 3: Shuffle Songs
 # Purpose: This function must take one parameter, list[Song]and return a new list[Song] that has the Songs in a random order
 # Input: list[Song]
