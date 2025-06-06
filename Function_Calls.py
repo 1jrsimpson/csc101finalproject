@@ -13,3 +13,4 @@ my_playlists2= Functions.playlist_oldvnew(data.songs2)
 
 # Calls for shuffled songs
 my_shuffled= Functions.playlist_shuffle_songs(data.songs1)
+
