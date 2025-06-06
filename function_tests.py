@@ -2,6 +2,8 @@ from unittest import TestCase
 import data
 import Classes
 import Functions
+from Classes import Duration
+from Classes import Song
 from data import songs1
 from data import songs2
 
@@ -21,7 +23,7 @@ class Test(TestCase):
 
     def test_playlist_duration_1(self):
         songs = songs1
-        total_time = data.Duration(3, 0)
+        total_time = Duration(3, 0)
         expected = [
             data.Song("HUMBLE.", data.Duration(2, 57), 2017, "Kendrick Lamar"),
             data.Song("Old Town Road", data.Duration(2, 37), 2019, "Lil Nas X"),

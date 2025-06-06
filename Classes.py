@@ -1,5 +1,7 @@
 # This file includes or Class Definitions
 import data
+import Functions
+from Functions import Duration
 
 
 # Class Song
@@ -10,11 +12,12 @@ class Song:
     # input: the song's title as a string
     # input: the song's duration as a Duration object
     # input: the year the song was released
-    def __init__(self, title: str, duration: data.Duration, year_released: int, artist: str):
+    def __init__(self, title: str, duration: Duration, year_released: int, artist: str):
         self.title = title
         self.duration = duration
         self.year_released = year_released
         self.artist = artist
+
     # Define the string representation of the class
     def __str__(self):
         return 'Song title: {}, Song duration: {}, Release year: {}, Song artist: {}'.format(self.title, self.duration, self.year_released, self.artist)

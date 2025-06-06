@@ -2,6 +2,7 @@
 # This is where we call our functions and show that they work
 import Functions
 import Classes
+from Classes import Duration
 import data
 from data import songs_dict
 
