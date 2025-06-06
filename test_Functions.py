@@ -21,7 +21,7 @@ class Test(TestCase):
         result = Functions.playlist_oldvnew(songs)
         self.assertEqual(expected, result)
 
-    ##############################################################################################
+    ###############################################################################################
 # FUNCTION 2 SONG DURATION
 
     def test_playlist_duration_1(self):
